@@ -1,0 +1,17 @@
+numpy
+pandas
+matplotlib
+seaborn
+nltk
+scikit-learn
+torch
+transformers
+sentencepiece
+moviepy
+pydub
+soundfile
+openai-whisper
+requests
+tqdm
+python-dotenv
+# -e .

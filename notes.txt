@@ -1,0 +1,52 @@
+create ->conda create -p venv python==3.10 -y
+            activate -> conda activate C:\Users\hp\Desktop\Shadow\venv
+            deactivate -> conda deactivate
+
+
+to run any file from root directory shadow just write int the directory[ (C:\Users\hp\Desktop\Shadow\venv) PS C:\Users\hp\Desktop\SHADOW>] ->  python -m src.components.transcription
+
+
+note -> Whisper (and also MoviePy / PyDub) relies on FFmpeg, an external media-processing tool, to handle audio/video decoding.
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+AI_Meeting_Summarizer/
+│
+├── README.md
+├── setup.py
+├── requirements.txt
+├── .env
+│
+├── logs/                          → for logs (created automatically)
+├── uploads/                       → where input MP4/MP3 files go
+├── processed/                     → where processed audio/transcripts go
+│
+├── src/
+│   ├── __init__.py
+│   │
+│   ├── components/                → Core backend modules
+│   │   ├── audio_extraction.py
+│   │   ├── transcription.py
+│   │   ├── summarization.py
+│   │   ├── email.py
+│   │   └── data_ingestion.py (optional, if reading existing meeting data)
+│   │
+│   ├── pipeline/                  → orchestrates components
+│   │   ├── __init__.py
+│   │   └── end_to_end_pipeline.py
+│   │
+│   ├── logger/                    → centralized logging
+│   │   └── logger.py
+│   │
+│   ├── exception/                 → centralized exception handler
+│   │   └── exception.py
+│   │
+│   ├── utils/                     → helper functions (cleaning, file ops)
+│   │   └── utils.py
+│
+├── frontend/                      → web UI (Flask or React)
+│   ├── static/ (CSS, JS)
+│   ├── templates/ (HTML files)
+│   └── app.py  (Flask server)
+│
+└── notebooks/                     → optional Jupyter tests
