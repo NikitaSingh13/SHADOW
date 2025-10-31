@@ -1,0 +1,45 @@
+git clone https://github.com/NikitaSingh13/Shadow.git
+cd Shadow
+
+create virtual env syntax -> conda create -p venv python==3.10 -y
+activation syntax -> conda activate shadow_env  || agar ye activate kaam nah kare to -> activate -> conda activate C:\Users\hp\Desktop\Shadow\venv
+                                                                    deactivate -> conda deactivate
+dependencies install (only after the virtual env is activated ) syntax -> pip install -r requirements.txt
+
+for openai-whisper and moviepy we need ffmpeg so syntax is -> python setup_ffmpeg.py
+-------------------------------------------------------------------------------------------------
+
+Shadow/
+│
+├── src/
+│   ├── components/
+│   │   ├── audio_processing.py
+│   │   ├── transcription.py
+│   │   └── summarization.py   # optional
+│   ├── pipeline/
+│   │   └── meeting_pipeline.py
+│   ├── logger.py
+│   └── exception.py
+│
+├── uploads/        # place your .mp4 or .mp3 meeting files here
+├── processed/      # auto-generated .wav files
+├── transcripts/    # generated text files
+├── summaries/      # generated summaries (if summarization added)
+│
+├── requirements.txt
+├── setup_ffmpeg.py
+├── setup.py
+├── .gitignore
+└── README.md
+├── venv
+
+--------------------------------------------------------------------------------------
+
+this is the folder structure isme uploads mein koi bhi mp4 file sample.mp4 naam se daal dena 
+
+then run -> python -m src.pipeline.meeting_pipeline
+
+ye run hote hi baaki ki files like processed, transcripts aur summaries create kar dega agar nahi karta to manually create kar lena then run the above command again 
+
+
+

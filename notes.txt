@@ -1,3 +1,6 @@
+maine anaconda use kara h to mera virtual env bhi aisa h you try with normal python environment jiska commands neeche likha hoga. nahi to fir tumhe bhi anaconda install karne hoga.
+
+
 create ->conda create -p venv python==3.10 -y
             activate -> conda activate C:\Users\hp\Desktop\Shadow\venv
             deactivate -> conda deactivate
